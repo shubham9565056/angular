@@ -1,0 +1,25 @@
+<span (click)="close()" class="cross">&#10005;</span>
+<p class="head">{{ task && task.taskDescription ?'Update Task':'Create Task'}} </p>
+<div class="form">
+    <div class="form-group">
+        <label for="task">Task</label>
+        <input type="text" [formControl]="taskDescription" id="task" required>
+        <em class="error" *ngIf="submitted && !taskDescription.value">Task description is required.</em>
+    </div>
+    <div class="form-group">
+        <label for="date" >Due Date</label>
+        <input type="datetime-local" id="date" [formControl]="dueDate">
+    </div>
+    <div class="form-group">
+        <label for="priority">Pririority</label>
+        <select style="width: 104%;" [formControl]="priority" name="priority" id="priority">
+            <option disabled selected value="">--Select Priority--</option>
+            <option value="1">low</option>
+            <option value="2">high</option>
+            <option value="3">medium</option>
+        </select>
+    </div>
+    <div class="btn">
+        <button (click)="submit()">{{task && task.taskDescription ?'Update':'Add'}}</button>
+    </div>
+</div>

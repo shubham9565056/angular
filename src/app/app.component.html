@@ -1,0 +1,20 @@
+<div class="outer-container">
+  <div class="header">
+<p>Tasks</p>
+  </div>
+  <div class="page-content">
+      <p class="exa">Example Task <button (click)="addTask()">+</button></p>
+      <div class="task-container">
+        <div class="task-list" *ngFor="let task of taskList">
+          <div class="task-card" [ngClass]="{'red':task.priority == 1,'yellow':task.priority == 2,'green':task.priority == 3}">
+            <span class="date">{{task.dueDate| date:'short'}}</span>
+            <span class="tool">
+              <span (click)="delete(task)"> &#10007;</span>
+              <span (click)="addTask(task)"> &#9997;</span>
+            </span>
+            <span class="title">{{task.taskDescription}}</span>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

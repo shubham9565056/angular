@@ -1,0 +1,45 @@
+.cross{
+    text-align: right;
+    width: 100%;
+    margin: 0;
+    float: right;
+    cursor: pointer;
+}
+.head{
+    font-size: 20px;
+    margin: 0;
+}
+.form-group{
+    padding: 5px 7px;
+    position: relative;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    width: 80%;
+}
+.form-group label{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0px;
+}
+.form-group input,select{
+    padding: 5px 7px;
+    width: 100%;
+    outline: none;
+}
+div.btn{
+    padding: 10px 8px;
+}
+div.btn button{
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #42a5f5;
+    border: 1px solid #1976d2;
+    border-radius: 2px;
+}
+em.error{
+    font-size: 12px;
+    color: #f44336;
+}
